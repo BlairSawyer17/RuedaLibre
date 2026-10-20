@@ -1,0 +1,11 @@
+URL: 	http://127.0.0.1:5500/index.html
+Protocolo: 
+Host: 127.0.0.1:5500
+Puerto: 5500
+Ruta:
+Método de petición: Get
+Código de estado: 304 Not Modified
+
+URL: 
+Método de petición: Get
+Código de estado: 404 Not Found
