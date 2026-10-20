@@ -6,6 +6,6 @@ Ruta:
 Método de petición: Get
 Código de estado: 304 Not Modified
 
-URL: 
+URL: http://127.0.0.1:5500/RuedaLibre/promociones.html
 Método de petición: Get
 Código de estado: 404 Not Found
