@@ -31,3 +31,9 @@ TABLA DE RUTAS
 | paginas/tarifas.html      | index.html                | ../index.html                 |
 | paginas/tarifas.html      | paginas/reservas.html     | ./reservas                    |
 +---------------------------+---------------------------+-------------------------------+
+
+Justificación divs:
+
+    En Index.html:
+      - <div class="container-content container-content-servicios">:Me sirve para crear un bloque que separa el título de los articles que contienen los servicios y así facilitar su diseño en CSS.
+      - <div class="container-encuentranos-content encuentranos-map"> : En este caso no busco dar información complementaria ni dar información aparta, solo busco encapsular esa parte del contenido para su diseño en CSS.
