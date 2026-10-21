@@ -1,11 +1,33 @@
 URL: 	http://127.0.0.1:5500/index.html
-Protocolo: 
+Protocolo: https://
 Host: 127.0.0.1:5500
 Puerto: 5500
-Ruta:
+Ruta: index.html
 Método de petición: Get
 Código de estado: 304 Not Modified
 
 URL: http://127.0.0.1:5500/RuedaLibre/promociones.html
 Método de petición: Get
 Código de estado: 404 Not Found
+
+HTML: Con este lenguaje crearemos toda la estructura de la página. Se establecera el orden de las secciones, de los títulos, tablas, páginas, enlaces, imagenes, textos, y demás.
+
+CSS: Con las hojas de estilo estableceremos las reglas de diseño como el formato de los títulos, subtítulos y párrafos; los colores de las letras, del fondo, listas, secciones, etc.; crearemos las animaciones; organizaremos los "bloques" para que la página se vea bonita; y haremos que la página sea responsive para que pueda visualizarse bien en cualquier dispositivo.
+
+JavaScript: Con este lenguaje de programación, haremos funcional la página.
+
+TABLA DE RUTAS
+
++---------------------------+---------------------------+-------------------------------+
+| Archivo de origen         | Destino                   | Ruta escrita                  |
++---------------------------+---------------------------+-------------------------------+
+| index.html                | paginas/tarifas.html      | ./paginas/tarifas.html        |
+| index.html                | paginas/reservas.html     | ./paginas/reservas.html       |
+| paginas/reservas.html     | css/style.css             | ../css/style.css              |
+| paginas/tarifas.html      | css/style.css             | ../css/style.css              |
+| paginas/reservas.html     | paginas/tarifas.html      | ./tarifas                     |
+| paginas/reservas.html     | index.html                | ../index.html                 |
+| index.html                | css/style.css             | ./css/style.css               |
+| paginas/tarifas.html      | index.html                | ../index.html                 |
+| paginas/tarifas.html      | paginas/reservas.html     | ./reservas                    |
++---------------------------+---------------------------+-------------------------------+
