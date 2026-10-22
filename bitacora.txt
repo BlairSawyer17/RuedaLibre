@@ -10,7 +10,7 @@ URL: http://127.0.0.1:5500/RuedaLibre/promociones.html
 Método de petición: Get
 Código de estado: 404 Not Found
 
-HTML: Con este lenguaje crearemos toda la estructura de la página. Se establecera el orden de las secciones, de los títulos, tablas, páginas, enlaces, imagenes, textos, y demás.
+HTML: Con este lenguaje crearemos toda la estructura de la página. Se establecera el orden de las secciones, de los títulos, tablas, páginas, enlaces, imagenes, textos, y demás siguiendo una nomenclatura semántica que permita la legibilidad de la página y la accesibilidad a la misma.
 
 CSS: Con las hojas de estilo estableceremos las reglas de diseño como el formato de los títulos, subtítulos y párrafos; los colores de las letras, del fondo, listas, secciones, etc.; crearemos las animaciones; organizaremos los "bloques" para que la página se vea bonita; y haremos que la página sea responsive para que pueda visualizarse bien en cualquier dispositivo.
 
@@ -32,8 +32,241 @@ TABLA DE RUTAS
 | paginas/tarifas.html      | paginas/reservas.html     | ./reservas                    |
 +---------------------------+---------------------------+-------------------------------+
 
-Justificación divs:
+ESQUEMA DE REGIONES:
+
+  PÁGINA: index.html
+  |
+  |-- ENCABEZADO (header)
+  |   |
+  |   |-- Logo (a > img)
+  |   |
+  |   |-- NAVEGACIÓN (nav)
+  |       |
+  |       |-- Lista de enlaces (ul)
+  |           |-- Inicio
+  |           |-- Nosotros
+  |           |-- Servicios
+  |           |-- Contacto
+  |           |-- Tarifas
+  |           |-- Reservas
+  |
+  |-- CONTENIDO PRINCIPAL (main)
+  |   |
+  |   |-- SECCIÓN: Bienvenida (section)
+  |   |   |-- Título principal (h1)
+  |   |   |-- Texto de bienvenida (p)
+  |   |
+  |   |-- SECCIÓN: Nosotros (section)
+  |   |   |-- Título de sección (h2)
+  |   |   |-- Descripción de la empresa (p)
+  |   |
+  |   |-- SECCIÓN: Servicios (section)
+  |   |   |-- Título de sección (h2)
+  |   |   |
+  |   |   |-- ARTÍCULO: Alquiler de bicicletas (article)
+  |   |   |   |-- Título del servicio (h3)
+  |   |   |   |-- Descripción (p)
+  |   |   |   |-- Enlace para reservar (a)
+  |   |   |   |-- Imagen del servicio (img)
+  |   |   |
+  |   |   |-- ARTÍCULO: Rutas guiadas (article)
+  |   |   |   |-- Título del servicio (h3)
+  |   |   |   |-- Descripción (p)
+  |   |   |   |-- Enlace a las rutas (a)
+  |   |   |   |-- Imagen del servicio (img)
+  |   |   |
+  |   |   |-- ARTÍCULO: Taller básico (article)
+  |   |       |-- Título del servicio (h3)
+  |   |       |-- Descripción (p)
+  |   |       |-- Imagen del servicio (img)
+  |   |
+  |   |-- SECCIÓN: Cómo alquilar (section)
+  |   |   |-- Título de sección (h2)
+  |   |   |-- Subtítulo (h3)
+  |   |   |-- Descripción introductoria (p)
+  |   |   |-- Lista ordenada de pasos (ol)
+  |   |   |-- Subtítulo: Beneficios de alquilar (h3)
+  |   |   |-- Lista de beneficios (ul)
+  |   |   |-- Enlace a las tarifas (a)
+  |   |
+  |   |-- SECCIÓN: Encuéntranos (section)
+  |       |-- Título de sección (h2)
+  |       |-- Información de contacto introductoria (p)
+  |       |
+  |       |-- CONTENEDOR DEL MAPA (div)
+  |       |   |-- Subtítulo: Visítanos en (h3)
+  |       |   |-- Mapa de ubicación (iframe)
+  |       |
+  |       |-- Información de contacto (address)
+  |           |-- Enlace de correo electrónico (a)
+  |
+  |-- PIE DE PÁGINA (footer)
+      |-- Nombre del sitio, correo y año
+
+
+PÁGINA: reservas.html
+|
+|-- ENCABEZADO (header)
+|   |
+|   |-- Logo (a > img)
+|   |
+|   |-- NAVEGACIÓN (nav)
+|       |
+|       |-- Lista de enlaces (ul)
+|           |-- Inicio
+|           |-- Nosotros
+|           |-- Servicios
+|           |-- Contacto
+|           |-- Tarifas
+|           |-- Reservas
+|
+|-- CONTENIDO PRINCIPAL (main)
+|   |
+|   |-- SECCIÓN: Horarios y contacto (section)
+|   |   |
+|   |   |-- Contenedor de título y correo (div)
+|   |   |   |-- Título principal (h1)
+|   |   |   |-- Correo electrónico (p > a)
+|   |   |
+|   |   |-- CONTENIDO COMPLEMENTARIO (aside)
+|   |       |-- Lista de definiciones (dl)
+|   |           |-- Días de atención (dt)
+|   |           |-- Horario (dd)
+|   |           |-- Días de atención (dt)
+|   |           |-- Horario (dd)
+|   |
+|   |-- SECCIÓN: Formulario de reservas (section)
+|       |
+|       |-- Título de sección (h2)
+|       |
+|       |-- Formulario (form)
+|           |
+|           |-- GRUPO: Tus datos (fieldset)
+|           |   |-- Nombre completo (label + input)
+|           |   |-- Tipo de documento (label + select)
+|           |   |-- Número de documento (label + input)
+|           |   |-- Correo electrónico (label + input)
+|           |   |-- Celular (label + input)
+|           |
+|           |-- GRUPO: Tu alquiler (fieldset)
+|           |   |-- Fecha de alquiler (label + input)
+|           |   |-- Tipo de bicicleta (label + select)
+|           |   |-- Plan de alquiler (label + select)
+|           |   |-- Número de bicicletas (label + input)
+|           |   |-- Recorrido guiado (label + select)
+|           |
+|           |-- GRUPO: Confirmación (fieldset)
+|           |   |-- Comentarios (label + textarea)
+|           |   |-- Términos y condiciones (p)
+|           |   |-- Aceptación de términos (input checkbox + label)
+|           |   |-- Confirmación de reserva (input checkbox + label)
+|           |
+|           |-- Botón de envío (button)
+|
+|-- PIE DE PÁGINA (footer)
+    |-- Nombre del sitio, correo y año
+
+
+PÁGINAS: tarifas.html
+|
+|-- ENCABEZADO (header)
+|   |
+|   |-- Logo (a > img)
+|   |
+|   |-- NAVEGACIÓN (nav)
+|       |
+|       |-- Lista de enlaces (ul)
+|           |-- Inicio
+|           |-- Nosotros
+|           |-- Servicios
+|           |-- Contacto
+|           |-- Tarifas
+|           |-- Reservas
+|
+|-- CONTENIDO PRINCIPAL (main)
+|   |
+|   |-- SECCIÓN: Tarifas de alquiler (section)
+|   |   |
+|   |   |-- Tabla de tarifas (table)
+|   |       |-- Título de tabla (caption)
+|   |       |-- Encabezados de columnas (thead)
+|   |       |   |-- Tipo de bicicleta
+|   |       |   |-- 1 hora
+|   |       |   |-- Medio día
+|   |       |   |-- Día completo
+|   |       |
+|   |       |-- Datos de tarifas (tbody)
+|   |           |-- Bicicleta urbana (tr)
+|   |           |-- Bicicleta de montaña (tr)
+|   |           |-- Bicicleta eléctrica (tr)
+|   |
+|   |-- SECCIÓN: Tarifas de recorridos guiados (section)
+|   |   |
+|   |   |-- Tabla de recorridos (table)
+|   |   |   |-- Título de tabla (caption)
+|   |   |   |-- Encabezados de columnas (thead)
+|   |   |   |   |-- Recorrido
+|   |   |   |   |-- Distancia
+|   |   |   |   |-- Duración
+|   |   |   |   |-- Nivel
+|   |   |   |   |-- Precio por persona
+|   |   |   |
+|   |   |   |-- Datos de recorridos (tbody)
+|   |   |       |-- Río y Parques (tr)
+|   |   |       |-- Sabores de Barrio (tr)
+|   |   |       |-- Reto Las Palmas (tr)
+|   |   |
+|   |   |-- Enlace para reservar (a)
+|   |
+|   |-- SECCIÓN: Descripción y requisitos (section)
+|       |
+|       |-- Información sobre tarifas y horarios (p)
+|       |
+|       |-- CONTENIDO COMPLEMENTARIO (aside)
+|           |-- Lista de requisitos (ul)
+|               |-- Ropa cómoda (li)
+|               |-- Agua (li)
+|               |-- Protector solar (li)
+|               |-- Documento de identidad (li)
+|
+|-- PIE DE PÁGINA (footer)
+    |-- Nombre del sitio, correo y año
+
+JUSTIFICACIÓN DIVs:
 
     En Index.html:
       - <div class="container-content container-content-servicios">:Me sirve para crear un bloque que separa el título de los articles que contienen los servicios y así facilitar su diseño en CSS.
       - <div class="container-encuentranos-content encuentranos-map"> : En este caso no busco dar información complementaria ni dar información aparta, solo busco encapsular esa parte del contenido para su diseño en CSS.
+
+    En reservas.html:
+      - <div class="form-group">: No buscan dar información complementaria o secundaria, solo agrupa conjuntos de label + input del mismo form para separarlos en pequeños contenedores que después harán más fácil organizar su diseño y visualización estética por medio de CSS. El orden jerárquico y la estructura semántica no se ven afectadas.
+
+
+PRUEBAS FORMULARIO:
+
+Formulario de reservas - Rueda Libre
+
+N.º | Campo                  | Dato de prueba                              | Resultado esperado | Resultado obtenido
+----|------------------------|---------------------------------------------|--------------------|--------------------
+01  | Nombre completo        | 123456                                      |                    |
+02  | Nombre completo        | Ana                                         |                    |
+03  | Tipo de documento      | No seleccionar ninguna opción               |                    |
+04  | Número de documento    | abc1234                                     |                    |
+05  | Número de documento    | 12345                                       |                    |
+06  | Número de documento    | 12345678901                                 |                    |
+07  | Correo electrónico     | ana-correo.com                              |                    |
+08  | Correo electrónico     | ana@dominio                                 |                    |
+09  | Celular                | 1234567890                                  |                    |
+10  | Celular                | 300123456                                   |                    |
+11  | Celular                | 30012345678                                 |                    |
+12  | Fecha de alquiler      | Fecha anterior al mínimo permitido          |                    |
+13  | Fecha de alquiler      | Fecha posterior al máximo permitido         |                    |
+14  | Fecha de alquiler      | No seleccionar ninguna fecha                |                    |
+15  | Tipo de bicicleta      | No seleccionar ninguna opción               |                    |
+16  | Plan de alquiler       | No seleccionar ninguna opción               |                    |
+17  | Número de bicicletas   | 0                                           |                    |
+18  | Número de bicicletas   | 7                                           |                    |
+19  | Número de bicicletas   | 2.5                                         |                    |
+20  | Recorrido guiado       | No seleccionar ninguna opción               |                    |
+21  | Comentarios            | Texto de más de 300 caracteres              |                    |
+22  | Términos y condiciones  | No marcar la casilla                       |                    |
