@@ -70,8 +70,9 @@ header {
     justify-content: space-between;
     box-shadow: 3px 0 7px 5px rgb(177, 184, 176);
     width: 100%;
-    position:;
+    position: sticky;
     z-index: 100;
+    top: 0;
 
 
     .logo {
