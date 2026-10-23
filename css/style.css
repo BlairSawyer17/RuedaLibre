@@ -1,3 +1,5 @@
+
+
 :root {
     --primary-color: #286044;
     --secondary-color: #F39A2B;
@@ -68,6 +70,8 @@ header {
     justify-content: space-between;
     box-shadow: 3px 0 7px 5px rgb(177, 184, 176);
     width: 100%;
+    position:;
+    z-index: 100;
 
 
     .logo {
