@@ -1,3 +1,8 @@
+URL DE GITHUB PAGES:
+
+  https://blairsawyer17.github.io/RuedaLibre/
+
+
 URL: 	http://127.0.0.1:5500/index.html
 Protocolo: https://
 Host: 127.0.0.1:5500
@@ -350,6 +355,14 @@ MAPA DE COLORES:
   | Gris Asfalto             | #5B6470           | Texto secundario                                |
   +--------------------------+-----------------------------------------------------------------------+
 
-  URL DE GITHUB PAGES:
 
-  https://blairsawyer17.github.io/RuedaLibre/
+PROPIEDADES:
+
+  -HEREDADAS: Si el elemento hijo no tienen valor lo toman del elemento padre.
+
+      En index.html el "<h2 class="title nosotros-title">" hereda "color: var(--text-color);" del body de style.css
+
+  -NO HEREDADAS: Si no tienen valor lo toman del estándar de css.
+
+      El mismo h2 tiene este valor por defecto: h2 {display: block;}
+
