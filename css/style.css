@@ -501,6 +501,24 @@ header {
 
 }
 
+.whatsapp{
+    
+    width: 11rem;
+    position: fixed;
+    bottom: 9rem;
+    right: var(--spacing-medium);
+
+    .btn-whatsapp{
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-small);
+
+        img{
+        width: 2rem;
+        }
+    }
+}
+
 footer {
     padding: var(--spacing-large);
     padding-bottom: 5rem;
