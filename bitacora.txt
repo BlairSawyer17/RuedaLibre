@@ -366,3 +366,9 @@ PROPIEDADES:
 
       El mismo h2 tiene este valor por defecto: h2 {display: block;}
 
+OBSERVACIÓN CON FLEX-BOX:
+
+  HEADER: En el header, al achicar la ventana se puede evidenciar como el nav-bar se va acomplando a la ventana gracias al flex-wrap,
+  cosa que antes pasaba. Ahora los items de la lista se mueven automáticamente para ajustarse a la pantalla.
+
+  FOOTER: 
