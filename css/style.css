@@ -504,7 +504,9 @@ header {
 
 .flota{
 
-    h2{}
+    h2{
+        padding: var(--spacing-medium);
+    }
     div{
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -512,14 +514,20 @@ header {
     
         .flota-article{
             padding: var(--spacing-large);
-            border: solid var(--text-color-secondary) 1px;
+            border: solid var(--border-color) 1px;
             border-radius: 25px;
             display: flex;
+            
 
 
             img{
                 width: 50%;
                 border-radius: 25px;
+                transition: ease 1s;
+            }
+            img:hover{
+                transform: scale(1.1);
+                width: 50%;
             }
 
             div{
