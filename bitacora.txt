@@ -428,7 +428,8 @@ PROPIEDADES:
 
 OBSERVACIÓN CON FLEX-BOX:
 
-  HEADER: En el header, al achicar la ventana se puede evidenciar como el nav-bar se va acomplando a la ventana gracias al flex-wrap,
-  cosa que antes pasaba. Ahora los items de la lista se mueven automáticamente para ajustarse a la pantalla.
+  HEADER Y FOOTER: Al achicar la ventana se puede evidenciar como los elementos dentro de estos se van acomplando a la ventana gracias al flex-wrap, cosa que antes no pasaba. Ahora los elementos se mueven automáticamente para ajustarse a la pantalla.
 
-  FOOTER: 
+OBSERVACIÓN DE FLOTA CON DEVTOOLS:
+
+  Los artículos se van acomodando para no ser más pequeños que el tamaño mínimo establecido. En 1280px se ven 3 artículos por fila, en 900px se ven 2 articulos por fila y en 500px se ve 1 artículo por fila.
