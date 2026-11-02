@@ -401,9 +401,15 @@ main{
     }
 }
 
-.container-horarios {
+.main-reservas{
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 2fr 1fr;
+}
+
+.container-horarios {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     gap: var(--spacing-large);
     background-color: var(--surface-color);
 
@@ -417,6 +423,23 @@ main{
                 color: var(--primary-color);
                 text-decoration: underline;
                 text-underline-offset: 0.2em;
+            }
+        }
+
+    }
+
+    .content-horarios-aside{
+        padding: var(--spacing-large);
+        border: solid 1px var(--secondary-color);
+        border-radius: 15px;
+
+        dl{
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-medium);
+
+            dt{
+                font-weight: bold;
             }
         }
     }
@@ -435,6 +458,9 @@ main{
 
         border: 1px solid var(--border-color);
         border-radius: 0.75rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-medium);
 
         legend {
             padding: 0 var(--spacing-small);
@@ -466,7 +492,7 @@ main{
                 color: var(--text-color);
                 font: inherit;
             }
-
+            
             textarea {
                 min-height: 8rem;
                 resize: vertical;
@@ -596,6 +622,88 @@ main{
 
         img {
             width: 2rem;
+        }
+    }
+}
+
+.rutas{
+    width: 100%;
+
+    .rutas-cards{
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: mandatory;
+        width: 100%;
+        gap: var(--spacing-large);
+
+        .ruta-card{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--spacing-medium);
+            border: var(--border-color) solid 1px;
+            border-radius: 25px;
+            scroll-snap-align: center;
+            flex: 0 0 70%;
+            background-color: var(--primary-color);
+
+            img{
+                width: 50%;
+                border-radius: 25px 0 0 25px;
+                height: 100%;
+                
+            }
+
+            .ruta-info{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                width: 50%;
+                gap: var(--spacing-medium);
+                background-color: var(--background-color);
+                left: 0;
+                margin: 5% 5%;
+                padding: 3rem;
+                border-radius: 25px;
+
+                h3{
+                    color: var(--text-color);
+                    font-size: 2rem;
+                }
+
+                .dificultad{
+                    text-decoration: underline;
+                    text-decoration-color: var(--secondary-color);
+                    text-decoration-thickness: 2px;
+                    text-underline-offset: var(--spacing-small);
+                    .nivel{
+                        font-weight: 600;
+                        color: var(--secondary-color);
+                        
+                    }
+                }
+
+                div{
+                    display: flex;
+                    justify-content: center;
+                    padding: var(--spacing-medium);
+                    background-color: var(--border-color);
+                    align-items: center;
+                    flex-direction: row;
+                    border-radius: 25px;
+                    gap: var(--spacing-large);
+                    padding-bottom: 0;
+                }
+
+                .ruta-precio{
+                    padding: var(--spacing-medium);
+                    background-color: var(--secondary-color);
+                    width: 40%;
+                    align-self: center;
+                    font-weight: bolder;
+                    border-radius: 25px;
+                }
+            }
         }
     }
 }
