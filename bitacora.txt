@@ -433,3 +433,27 @@ OBSERVACIÓN CON FLEX-BOX:
 OBSERVACIÓN DE FLOTA CON DEVTOOLS:
 
   Los artículos se van acomodando para no ser más pequeños que el tamaño mínimo establecido. En 1280px se ven 3 artículos por fila, en 900px se ven 2 articulos por fila y en 500px se ve 1 artículo por fila.
+
+FLEX-BOX O GRID:
+
+  -Portada: En la portada me tomé un par de licencias creativas. Utilicé la imagen como fondo y el contenido de texto en un div para poder difuminar el fondo y que sea legible. El contenido sí lleva flex-box para organizarlos en columna. Al ser solo una sola línea no vi necesario usar el grid.
+
+  -Galería: En la galería de rutas, decidí convertirlo en un carrusel para que se vea más dinámica la página razón por la cual utilicé flex-box para poder deslizarlas en horizontal.
+
+  -Formulario: En el formulario sí seguí las indicaciones al píe de la letra. Utilicé grid para dividir la página de reservas.html en dos columnas una de 2fr(la que tiene el formulario) y otra de 1fr(la que tiene el horario); a su vez, utilicé grid para dividir el formulario en 2 columnas iguales en su tamaño para pc y en una columna para su tamaño en móvil y tablet.
+
+  -Encabezado y píe de página: En ambas ocasiones utilicé flex-box, tanto para la etiqueta padre como para los hijos. En el encabezado me sirvió para el menú hamburguesa en la versión móvil y de tablet, para desplegar el navbar en columna, y para el navbar visible y en fila en la versión de pc, además de mantener el espacio entre el logo y el navbar(o menú hamburguesa dependiendo de la resolución) del mismo tamaño para que queden en las esquinas del header. Por otra parte, en el píe de página se utilizó el flex-box para separar en fila los artículos(Marca, contacto y horario), además de que haga wrap si se queda sin espacio, y para organizar el contenido de cada uno en columnas.
+
+
+
+ENFOQUE MOBILE-FIRST CORRECCIONES:
+
+  Index:
+    -En la media query 1200px en el apartado de rutas, la parte de ruta-info se veía descompensada y extraña. Tuve que ajustar el margin para centrar bien el contenedor y que no se fusionara entre el fondo del padre y su hermano. 
+
+    -En el carrusel de rutas, en la media query base, el carrusel no centraba las las tarjetas automáticamente. Había olvidado colocar la el desplazamiento en x en "scroll-snap-type: x mandatory;"
+
+  Reservas:
+    -En el formulario, en el cajón de comentarios en la media query de 1200px, el cajón ocupaba 1fr, por lo que se veía extraño, así que usé grid-column, para ajustar su tamaño para que ocupe 2fr(todo el contenedor).
+
+    -También, en la confirmación del formulario, corregí la posición del los label del checkbox para que queden alíneadas vertícalmente usando flex-box.

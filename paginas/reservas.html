@@ -13,13 +13,20 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+    <!-- <link rel="stylesheet" href="../css/style.css"> --> <!-- primer CSS, enfoque primero pc -->
+    <link rel="stylesheet" href="../css/mobil-first.css"> <!-- Enfoque Mobile-first -->
+    <meta name="description" content="Reserva aquí nuestras bicicletas o agenda una de nuestras rutas por Medellín">
 </head>
 
 <body>
     <header>
         <a href="../index.html" class="logo"><img src="../img/Logo.png" alt="Logo de Rueda Libre" width="100"
                 class="logo-img"></a>
+
+        <input type="checkbox" id="menu">
+        <label for="menu">
+            <img src="../img/menu.png" class="menu-icon" alt="icono menú hamburguesa">
+        </label>
 
         <nav class="nav">
             <ul class="nav-bar">
@@ -28,14 +35,14 @@
                 <li class="nav-bar-item"><a href="../index.html#Servicios">Servicios</a></li>
                 <li class="nav-bar-item"><a href="../index.html#Encuentranos">Contacto</a></li>
                 <li class="nav-bar-item"><a href="./tarifas.html">Tarifas</a></li>
-                <li class="nav-bar-item activo" ><a href="./reservas.html" >Reservas</a></li>
+                <li class="nav-bar-item activo"><a href="./reservas.html">Reservas</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="main-reservas">
 
-        
+
 
         <section class="container container-formreservas">
             <h2>Realiza tu reserva</h2>
@@ -131,7 +138,7 @@
                 <fieldset>
                     <legend>Confirmación</legend>
 
-                    <div class="form-group">
+                    <div class="form-group form-group-textarea">
                         <label for="coment">Comentarios</label>
                         <textarea name="coment" id="coment" maxlength="300"
                             placeholder="Déjanos aquí tu comentario"></textarea>
@@ -143,14 +150,14 @@
                             aliquam! Beatae voluptatem esse alias inventore? Facilis assumenda voluptate id
                             obcaecati
                             aspernatur velit tempore minima voluptates reprehenderit!</p>
-                        <div class="form-group-checkbox"></div>
-                        <input type="checkbox" name="terms" required
-                            title="Por favor, acepte nuestros términos y condiciones" id="terms">
-                        <label for="terms">He leído y acepto los términos y condiciones</label>
+                        <div class="form-group-checkbox">
+                            <input type="checkbox" name="terms" required
+                                title="Por favor, acepte nuestros términos y condiciones" id="terms">
+                            <label for="terms">He leído y acepto los términos y condiciones</label>
                         </div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group form-group-checkbox">
                         <input type="checkbox" name="confirm" id="confirm" required
                             title="Por favor, confirme su reserva">
                         <label for="confirm">Confirmo que la información proporcionada es correcta y deseo realizar la
@@ -181,7 +188,8 @@
 
         <aside class="whatsapp">
             <a href="whatsapp://send?phone=573001234567" target="_blank" class="btn btn-whatsapp">
-                <img src="../img/whatsapp.png" alt="WhatsApp"> Escríbenos!
+                <img src="../img/whatsapp.png" alt="WhatsApp">
+                <p>Escríbenos!</p>
             </a>
         </aside>
 
