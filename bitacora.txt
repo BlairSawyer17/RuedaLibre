@@ -457,3 +457,30 @@ ENFOQUE MOBILE-FIRST CORRECCIONES:
     -En el formulario, en el cajón de comentarios en la media query de 1200px, el cajón ocupaba 1fr, por lo que se veía extraño, así que usé grid-column, para ajustar su tamaño para que ocupe 2fr(todo el contenedor).
 
     -También, en la confirmación del formulario, corregí la posición del los label del checkbox para que queden alíneadas vertícalmente usando flex-box.
+
+FLOTA EN BOOTSTRAP: COMPARACIÓN.
+
+  +------------------+----------------------------------------------------------------+----------------------------------------------------------------+
+  | Comparativa      | CSS puro                                                       | Bootstrap                                                      |
+  +------------------+----------------------------------------------------------------+----------------------------------------------------------------+
+  | Tiempo invertido | 5 minutos                                                      | 30 minutos                                                     |
+  +------------------+----------------------------------------------------------------+----------------------------------------------------------------+
+  | Línea de código  | Se usó líneas más largas como "display:flex;", "display: grid; | Sus líneas fueron más cortas: "gap-4" "row" "col-12" "col-md-4"|
+  |                  | "grid-template-columns;", etc; sin contar la repetición para   | "btn", etc. Muchísimo más cortas que en CSS; pero puede tardar |
+  |                  | los breakpoints para el responsive.                            | un poco más al tener que repetirse por etiqueta a menos que lo |
+  |                  |                                                                | hagas con emmet desde el la construcción del html.             |
+  +------------------+----------------------------------------------------------------+----------------------------------------------------------------+
+  | Esfuerzo         | Tienes que ser creativo si quieres un diseño bonito, tienes    | Tiene estilos prediseñados que se pueden utilizar con sus      |
+  |                  | pensar muy bien en el diseño, la composición, los colores y    | respectivas clases lo que puede ahorrar algunos mínutos de     |
+  |                  | muchas otras cosas, por lo que si no eres muy bueno en diseño  | código.                                                        |
+  |                  | puedes terminar creando una página mediocre.                   |                                                                |
+  +------------------+----------------------------------------------------------------+----------------------------------------------------------------+
+  | Control          | Te permite tener control absoluto sobre el diseño. Desde los   | Si bien ahorra tiempo y tiene estilos prediseñados, si se      |
+  |                  | colores, los cientos de parametros, grosores, botones, filas,  | utiliza únicamente bootstrap las páginas pueden verse muy      |
+  |                  | columnas, etc. Sacrificas tiempo por diseño.                   | genéricas o similares a muchas páginas por lo que lo ideal es  |
+  |                  |                                                                | siempre utilizarlo junto a CSS.                                |
+  +------------------+----------------------------------------------------------------+----------------------------------------------------------------+
+  Nota: En mi caso me demoré mucho más con Bootstrap porque es mi primera vez usándolo cuando ya tengo mucha más experiencia con CSS y porque no utilicé las clases de "card" de Bootstrap. Sé que lo pedía el reto de manera indirecta; pero quería conservar el estilo de las cards que tengo en mi
+  CSS original, aunque solo con bootstrap me fue imposible recrearlo.
+
+  
