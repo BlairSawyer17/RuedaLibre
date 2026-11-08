@@ -483,4 +483,18 @@ FLOTA EN BOOTSTRAP: COMPARACIÓN.
   Nota: En mi caso me demoré mucho más con Bootstrap porque es mi primera vez usándolo cuando ya tengo mucha más experiencia con CSS y porque no utilicé las clases de "card" de Bootstrap. Sé que lo pedía el reto de manera indirecta; pero quería conservar el estilo de las cards que tengo en mi
   CSS original, aunque solo con bootstrap me fue imposible recrearlo.
 
-  
+  Actualización: Decidí dejar de intentar recrear mi diseño original con bootstrap y usar la clase card de Bootstrap.
+
+CLASES BOOTSTRAP:
+
+Navegando por la documentación encontré estas clases que, si bien no usé todas en esta ocasión, me parecieron interesantes.
+
+  -.hover-lift: Al pasar el mouse por la etiqueta, esta se levanta ligeramente y le da un pequeño sombreado inferior.
+
+  -.img-fluid: Hace que la imagen sea responsive, el equivalente a usar "width: 100%;" y "height: auto;" en CSS.
+
+  -.accordion: Hace un desplegable perfectamente funcional junto con las clases .accordion-item, .accordion-header y .accordion-button junto con data-bs-toggle = "colapsable" data-bs-target="#idDelElementoADesplegar" aria-expanded="true" aria-controls="idDelElementoADesplegar". Y accordion-collapse .collapse show  y data-bs-parent="#idDelDesplegable" en el elemento a desplegar.
+
+  -.btn-outline-var: Hace que los botones no tengan fondo, sino que el borde y el texto se ponen del color del tipo de variable que se le asigne, por ejempo, si se escribe class="btn btn-outline-success" entonces será verde.
+
+  -.carousel .slide: Permite crear un carrusel con flechas que permiten su movilización. Sus hijos y nietos usan: .carousel-inner, .carousel-item, .active, .carousel-contro-prev, .carousel-control-prev-icon, .carousel-contro-next, .carousel-control-next-icon y .visually-hidden
