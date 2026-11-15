@@ -11,7 +11,7 @@
 **Petición 1**
 
 - **URL:** `http://127.0.0.1:5500/index.html`
-- **Protocolo:** `https://`
+- **Protocolo:** `http://`
 - **Host:** `127.0.0.1:5500`
 - **Puerto:** `5500`
 - **Ruta:** `index.html`
@@ -131,14 +131,6 @@ PÁGINA: index.html
 |   |       |       |-- Enlace a reservas (a)
 |   |       |
 |   |       |-- Artículo: Bicicleta montaña trail (article)
-|   |       |   |-- Imagen bicicleta (img)
-|   |       |   |-- Contenedor información de bicicleta (div)
-|   |       |       |-- Título bicicleta (h3)
-|   |       |       |-- Descripción bicicleta (p)
-|   |       |       |-- Precio alquiler bicicleta (p)
-|   |       |       |-- Enlace a reservas (a)
-|   |       |
-|   |       |-- Artículo: Urbana Clásica (article)
 |   |       |   |-- Imagen bicicleta (img)
 |   |       |   |-- Contenedor información de bicicleta (div)
 |   |       |       |-- Título bicicleta (h3)
@@ -357,8 +349,8 @@ PÁGINA: tarifas.html
 | 14 | Fecha de alquiler | No seleccionar fecha | Error/Aviso, debe elegir una fecha | El esperado |
 | 15 | Tipo de bicicleta | No seleccionar opción | Error/Aviso, debe elegir una opción | El esperado |
 | 16 | Plan de alquiler | No seleccionar opción | Error/Aviso, debe elegir una opción | El esperado |
-| 17 | Número de bicicletas | `0` | Error/Aviso, el número debe ser mayor a 1 | El esperado |
-| 18 | Número de bicicletas | `7` | Error/Aviso, el número debe ser menor a 6 | El esperado |
+| 17 | Número de bicicletas | `0` | Error/Aviso, el número debe ser mínimo 1 | El esperado |
+| 18 | Número de bicicletas | `7` | Error/Aviso, el número debe ser máximo 6 | El esperado |
 | 19 | Número de bicicletas | `2.5` | Error/Aviso, error de formato | El esperado |
 | 20 | Recorrido guiado | No seleccionar opción | Error/Aviso, debe elegir una opción | El esperado |
 | 21 | Comentarios | Texto de más de 300 caracteres | No permite escribir más | El esperado |
